@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reproductor de video resposive en modal">
+    <title>Reproductor</title>
+
+    <!--favicon para navegadores estandard -->
+    <link rel="icon" href="R3/recursos/favicon.png" sizes="32x32" type="image/png">
+    <!-- favicon para iphone y ipad -->
+    <link rel="apple-touch-icon-precomposed" href="R3/recursos/favicon.png" type="image/png" sizes="152x152">
+    <link rel="apple-touch-icon-precomposed" href="R3/recursos/favicon.png" type="image/png" sizes="120x120">
+    <!-- favicon para otros dispositivos -->
+    <link rel="icon" href="R3/recursos/favicon.png" sizes="96x96" type="image/png">
+    <!-- estilos de la pagina -->
+    <link rel="stylesheet" href="R3/css/style.css">
+    <!-- estilos de Bootstrap -->
+    <link rel="stylesheet" href="librerias/bootstrap/css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/40db6c3916.js" crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script type="text/javascript" src="librerias/jquery/jquery.js"></script>
+</head>
+
+<body>
+    
+  <div class="container" style=" padding-top: 15px">
+    <div class="row">
+
+      <div class="col-md-6 col-sm-12 contenedor-play">
+        <img class="card-img" src="R3/recursos/miniatura.png" alt="Play">
+        <div class="boton-play" onclick="reproducirVideo()"><i class="far fa-play-circle"></i></div>
+      </div>
+
+      <div class="col-md-6 col-sm-12 align-self-center p-4">
+        <h5 >Lorem ipsum dolor</h5>
+        <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, iste, nostrum. Cumque minus qui accusamus. Ipsa voluptas eaque minus sequi saepe laudantium, dolorum ipsum esse? Exercitationem odio consequuntur aliquid culpa.</p>
+      </div>
+
+    </div>
+  </div>
+    
+  <!-- Modal para reproducir el video -->
+  <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog"  >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="videoModalLabel">Video</h5>
+          <button type="button" class="close" data-dismiss="modal" onclick="pararVideo()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <video id="video" width="480" height="320" controls="controls" class="pr-3">
+            <source src="R3/recursos/video.mp4" type="video/mp4">
+            </video>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <script type="text/javascript" src="R3/js/play.js"></script>
+  <script type="text/javascript"src="librerias/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
